@@ -1,0 +1,14 @@
+{
+  "name": "instantly-better-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "STX Next",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^11.0.0"
+  }
+}
