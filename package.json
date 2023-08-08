@@ -4,11 +4,18 @@
   "description": "",
   "main": "cypress.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prepare": "husky install"
   },
   "author": "STX Next",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^11.0.0"
+    "cypress": "^11.0.0",
+    "eslint": "^8.46.0",
+    "eslint-plugin-cypress": "^2.13.4",
+    "husky": "^8.0.3"
   }
 }

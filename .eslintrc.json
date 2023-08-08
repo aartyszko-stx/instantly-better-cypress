@@ -1,0 +1,37 @@
+{
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": [
+      "airbnb-base",
+      "plugin:cypress/recommended"
+    ],
+    "rules": {
+      "arrow-parens": "off",
+      "import/no-extraneous-dependencies": [
+        "error", { "devDependencies": true }
+    ],
+      "quotes": [
+        2, "double", { "avoidEscape": true }
+    ],
+      "import/no-unresolved": "off",
+      "import/extensions": "off",
+      "import/prefer-default-export": "off",
+      "arrow-body-style": ["off", "as-needed"],
+      "object-curly-newline": [
+        "error",
+        {
+          "ObjectExpression": { "multiline": true, "consistent": true },
+          "ObjectPattern": { "multiline": true, "consistent": true },
+          "ImportDeclaration": { "multiline": true, "consistent": true },
+          "ExportDeclaration": {
+            "multiline": true,
+            "consistent": true,
+            "minProperties": 1
+          }
+        }
+      ]
+    }
+  }
+  
