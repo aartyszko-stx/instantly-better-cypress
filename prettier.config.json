@@ -1,0 +1,22 @@
+{
+  "semi": true,
+  "singleQuote": false,
+  "useTabs": false,
+  "tabWidth": 2,
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "trailingComma": "all",
+  "preferSingleLine": false,
+  "memberExpression": {
+    "linePerExpression": true
+  },
+  "printWidth": 140,
+  "overrides": [
+    {
+      "files": "*.ts",
+      "options": {
+        "parser": "typescript"
+      }
+    }
+  ]
+}
