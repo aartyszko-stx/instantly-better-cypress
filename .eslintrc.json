@@ -13,7 +13,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "ignorePatterns": ["cucumber-messages.ndjson", "cucumber-report"],
+  "ignorePatterns": ["reports"],
   "plugins": ["@typescript-eslint"],
   "rules": {
     "arrow-parens": "off",
