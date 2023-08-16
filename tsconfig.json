@@ -7,5 +7,5 @@
     "lib": ["es5", "dom"],
     "types": ["cypress", "node"]
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts", "cypress/reports/html/assets/app.js"]
 }

@@ -1,5 +1,4 @@
-/* eslint-disable global-require, @typescript-eslint/no-var-requires */
-
+/* eslint-disable @typescript-eslint/no-var-requires*/
 import { defineConfig } from "cypress";
 
 export default defineConfig({

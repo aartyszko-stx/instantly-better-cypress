@@ -4,22 +4,22 @@
     "es2021": true
   },
   "extends": [
-    "airbnb-base",
     "plugin:cypress/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
+    "project": "./tsconfig.json"
   },
   "ignorePatterns": ["reports"],
   "plugins": ["@typescript-eslint"],
   "rules": {
     "arrow-parens": "off",
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-    "quotes": [2, "double", { "avoidEscape": true }],
+    "@typescript-eslint/quotes": ["error", "double"],
+    "import/no-extraneous-dependencies": "off",
     "import/no-unresolved": "off",
+    "no-var": "error",
     "import/extensions": "off",
     "import/prefer-default-export": "off",
     "@typescript-eslint/no-namespace": "off",
