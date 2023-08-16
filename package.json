@@ -4,12 +4,12 @@
   "description": "",
   "main": "cypress.config.js",
   "scripts": {
-    "cy:open": "cypress open",
-    "cy:run": "cypress run",
-    "lint": "eslint .",
+    "cy:open--e2e": "cypress open",
+    "cy:run--e2e": "cypress run",
+    "lint": "eslint && prettier --check \"**/*.{ts,js,tsx,json,md,yml}\"",
     "lint:fix": "eslint --fix .",
     "prepare": "husky install",
-    "prettier": "prettier --write \"**/*.{js,json,ts}\""
+    "prettier": "prettier --write \"**/*.{ts,js,tsx,json,md,yml}\""
   },
   "author": "STX Next",
   "license": "ISC",
