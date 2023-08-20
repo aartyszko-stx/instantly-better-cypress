@@ -53,6 +53,9 @@ Execute the tests using the following commands:
 npm run cy:open--e2
 ```
 
+The generated reports will be available in the cypress/reports directory
+
+
 2. Run tests in headless mode:
 
 ```
