@@ -54,6 +54,7 @@ npm run cy:open--e2
 ```
 
 2. Run tests in headless mode:
+
 ```
 cy:run--e2e
 ```
