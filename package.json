@@ -4,11 +4,26 @@
   "description": "",
   "main": "cypress.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:open--e2e": "cypress open",
+    "cy:run--e2e": "cypress run",
+    "lint": "eslint '**/*.{ts,js,tsx}' && prettier --check '**/*.{ts,js,tsx,json,md,yml}'",
+    "lint:fix": "eslint --fix .",
+    "prepare": "husky install",
+    "prettier": "prettier --write '**/*.{ts,js,tsx,json,md,yml}'"
   },
   "author": "STX Next",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^11.0.0"
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "cypress": "^12.17.4",
+    "cypress-mochawesome-reporter": "^3.5.1",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-cypress": "^2.13.4",
+    "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.3",
+    "prettier": "^3.0.1",
+    "typescript": "^5.1.6"
   }
 }
