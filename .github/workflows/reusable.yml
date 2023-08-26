@@ -1,0 +1,26 @@
+name: Run Cypress and upload artifacts
+
+on:
+  workflow_call:
+    inputs:
+      spec-path:
+        required: true
+        type: string
+
+jobs:
+  reusable_workflow_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run Cypress Tests
+        uses: cypress-io/github-action@v5
+        continue-on-error: true
+        with:
+          spec: ${{ inputs.spec-path }}
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: "cypress/reports/html"
