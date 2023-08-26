@@ -1,0 +1,9 @@
+{
+  "mochawesomeReporterOptions": {
+    "reportDir": "cypress/reports",
+    "charts": true,
+    "reportPageTitle": "Test Report",
+    "embeddedScreenshots": true,
+    "videoOnFailOnly": true
+  }
+}
