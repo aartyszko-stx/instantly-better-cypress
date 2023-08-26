@@ -1,9 +1,9 @@
-name: Run Schedule and Deploy results on Pages
+name: Run Nightly and Deploy results on Pages
 on:
   repository_dispatch:
   schedule:
     # runs tests every day at 4am
-    - cron: '0 4 * * *'
+    - cron: "0 4 * * *"
 
 permissions:
   contents: read
@@ -18,7 +18,7 @@ jobs:
   run-cypress:
     uses: ./.github/workflows/reusable.yml
     with:
-      spec-path: "cypress/e2e/ci-test-example/**"
+      spec-path: "cypress/e2e/ci-demo/**"
     secrets: inherit
 
   deploy-pages:
