@@ -1,0 +1,17 @@
+# Examplary workflow to trigger repository_dispatch event. Can be used in other repositories
+# Please remember to generate Personal Access Token and set it as ACTIONS_KEY in CI variables
+name: Trigger workflow with tests from separated repo
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run tests
+        run: |
+          curl -X POST https://api.github.com/repos/bbrozyna/messing-with-cypress/dispatches \
+          -H 'Accept: application/vnd.github.everest-preview+json' \
+          -u ${{ secrets.ACTIONS_KEY }} \
+          --data '{"event_type": "Trigger Workflow", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
