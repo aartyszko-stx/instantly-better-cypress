@@ -19,6 +19,7 @@ jobs:
 
       - name: Launch code linter
         run: |
+          npm install
           npm run lint
 
       - name: Determine modified files
