@@ -1,0 +1,35 @@
+name: Run Nightly and Deploy results on Pages
+on:
+  repository_dispatch:
+  schedule:
+    # runs tests every day at 4am
+    - cron: "0 4 * * *"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  run-cypress:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      spec-path: "cypress/e2e/ci-demo/**"
+    secrets: inherit
+
+  deploy-pages:
+    needs: run-cypress
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
