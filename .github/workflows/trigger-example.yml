@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Run tests
         run: |
-          curl -X POST https://api.github.com/repos/bbrozyna/messing-with-cypress/dispatches \
+          curl -X POST https://api.github.com/repos/aartyszko-stx/instantly-better-cypress/dispatches \
           -H 'Accept: application/vnd.github.everest-preview+json' \
           -u ${{ secrets.ACTIONS_KEY }} \
           --data '{"event_type": "Trigger Workflow", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
