@@ -31,7 +31,7 @@ const tests = [
     cy.wrap($listElement.text())
       .should("equal", beverages[index]);
 
-  expect($listElement.text()).to.equal(beverages[index]) // it will be executed first
+    expect($listElement.text()).to.equal(beverages[index]); // it will be executed first
     })
     `,
   },
@@ -40,11 +40,27 @@ const tests = [
     html: listExample,
     test: `
   const beverages = ["Coffee", "Tea", "Milk"];
+  const property = "textContent";
 
   cy.get('li')
-  .getPropertyArray("textContent")
+    .then($listElement => {
+      cy.wrap(Cypress._.map($listElement, property));
+    })
+    .should("deep.equal", beverages);
+  `,
+  },
+  {
+    name: "Using cy.map",
+    html: listExample,
+    test: `
+  const beverages = ["Coffee", "Tea", "Milk"];
+  const property = "textContent";
+
+  cy.get('li')
+  .map(property)
   .should("deep.equal", beverages);
   `,
   },
 ];
+
 testExamples(tests);

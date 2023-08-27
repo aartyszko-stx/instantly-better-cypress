@@ -27,6 +27,7 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "@cypress/fiddle": "^1.19.3"
+    "@cypress/fiddle": "^1.19.3",
+    "cypress-map": "^1.21.1"
   }
 }
