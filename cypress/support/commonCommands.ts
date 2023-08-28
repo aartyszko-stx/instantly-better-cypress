@@ -4,9 +4,9 @@ const clickButton = (buttonName: string) => {
 
 const assertText = (text: string) => {
   cy.contains(text).should("be.visible");
-}
+};
 
 export const common = {
   clickButton,
-  assertText
+  assertText,
 };
