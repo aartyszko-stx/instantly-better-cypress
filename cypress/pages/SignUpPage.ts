@@ -1,8 +1,8 @@
 import { User } from "../fixtures/generateUser";
 import { getById, getDataQa, getLabelByText } from "../support/selectors";
-import { CommonPage } from "./CommonPage";
+import { BasePage } from "./BasePage";
 
-export class SignUpPage extends CommonPage {
+export class SignUpPage extends BasePage {
   fillNewUserSignUpForm(user: User) {
     const { firstName, email } = user;
     getDataQa("signup-name").type(firstName);

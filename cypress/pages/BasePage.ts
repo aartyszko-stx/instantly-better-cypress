@@ -1,6 +1,6 @@
 import { getButtonByText } from "../support/selectors";
 
-export class CommonPage {
+export class BasePage {
   clickButton(buttonText: string) {
     getButtonByText(buttonText).click();
   }
