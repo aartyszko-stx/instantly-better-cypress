@@ -1,6 +1,8 @@
+import { getButtonByText } from "../support/selectors";
+
 export class CommonPage {
-  clickButton(buttonName: string) {
-    cy.get(`button:contains('${buttonName}')`).click();
+  clickButton(buttonText: string) {
+    getButtonByText(buttonText).click();
   }
 
   assertText(text: string) {
