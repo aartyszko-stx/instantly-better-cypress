@@ -1,12 +1,11 @@
 import { User } from "../fixtures/generateUser";
-import { getById, getDataQa, getLabelByText } from "../support/selectors";
 import { BasePage } from "./BasePage";
 
 export class SignUpPage extends BasePage {
   fillNewUserSignUpForm(user: User) {
     const { firstName, email } = user;
-    getDataQa("signup-name").type(firstName);
-    getDataQa("signup-email").type(email);
+    cy.getDataQa("signup-name").type(firstName);
+    cy.getDataQa("signup-email").type(email);
   }
 
   fillAccountInformation(user: User) {
@@ -19,15 +18,15 @@ export class SignUpPage extends BasePage {
       isNewsletterSubscribed,
       isSpecialOffersSubscribed,
     } = user;
-    getLabelByText(title).click();
-    getDataQa("name").should("have.value", firstName);
-    getDataQa("email").should("have.value", email);
-    getDataQa("password").type(password);
-    getDataQa("days").select(dateOfBirth.day);
-    getDataQa("months").select(dateOfBirth.month);
-    getDataQa("years").select(dateOfBirth.year);
-    isNewsletterSubscribed && getById("newsletter").check();
-    isSpecialOffersSubscribed && getById("optin").check();
+    cy.getLabelByText(title).click();
+    cy.getDataQa("name").should("have.value", firstName);
+    cy.getDataQa("email").should("have.value", email);
+    cy.getDataQa("password").type(password);
+    cy.getDataQa("days").select(dateOfBirth.day);
+    cy.getDataQa("months").select(dateOfBirth.month);
+    cy.getDataQa("years").select(dateOfBirth.year);
+    isNewsletterSubscribed && cy.getById("newsletter").check();
+    isSpecialOffersSubscribed && cy.getById("optin").check();
   }
 
   fillAddressInformation(user: User) {
@@ -43,15 +42,15 @@ export class SignUpPage extends BasePage {
       zipCode,
       mobileNumber,
     } = user;
-    getDataQa("first_name").type(firstName);
-    getDataQa("last_name").type(lastName);
-    getDataQa("company").type(company);
-    getDataQa("address").type(address);
-    getDataQa("address2").type(address2);
-    getDataQa("country").select(country);
-    getDataQa("state").type(state);
-    getDataQa("zipcode").type(city);
-    getDataQa("city").type(zipCode);
-    getDataQa("mobile_number").type(mobileNumber);
+    cy.getDataQa("first_name").type(firstName);
+    cy.getDataQa("last_name").type(lastName);
+    cy.getDataQa("company").type(company);
+    cy.getDataQa("address").type(address);
+    cy.getDataQa("address2").type(address2);
+    cy.getDataQa("country").select(country);
+    cy.getDataQa("state").type(state);
+    cy.getDataQa("zipcode").type(city);
+    cy.getDataQa("city").type(zipCode);
+    cy.getDataQa("mobile_number").type(mobileNumber);
   }
 }
