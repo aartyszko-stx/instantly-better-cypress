@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@cypress/fiddle": "^1.19.3",
+    "chai-sorted": "^0.2.0",
     "cypress-map": "^1.21.1"
   },
   "husky": {
