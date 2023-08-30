@@ -8,7 +8,6 @@
     "cy:run--e2e": "cypress run",
     "lint": "eslint '**/*.{ts,js,tsx}' && prettier --check '**/*.{ts,js,tsx,json,md,yml}'",
     "lint:fix": "eslint --fix .",
-    "prepare": "husky install",
     "prettier": "prettier --write '**/*.{ts,js,tsx,json,md,yml}'"
   },
   "author": "STX Next",
@@ -24,7 +23,24 @@
     "eslint-plugin-cypress": "^2.13.4",
     "eslint-plugin-prettier": "^5.0.0",
     "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
     "prettier": "^3.0.1",
     "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@cypress/fiddle": "^1.19.3",
+    "chai-sorted": "^0.2.0",
+    "cypress-map": "^1.21.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{ts,js,tsx,json,md,yml}": [
+      "npm run prettier",
+      "npm run lint"
+    ]
   }
 }
