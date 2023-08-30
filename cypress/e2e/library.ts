@@ -1,13 +1,10 @@
 describe("using selectors and testing library approach", () => {
-  before(() => {
-    cy.visit("https://www.stxnext.com/");
+  beforeEach(() => {
+    cy.visit("https://www.stxnext.com/blog");
   });
 
-  it("should find blog link on stx page using selector", () => {
+  it("should find blog link on stx page using testing library and selector", () => {
+    // cy.findByRole();
     // cy.get().click();
-  });
-
-  it("should find blog link on stx page using testing library", () => {
-    // cy.findByRole().click();
   });
 });
