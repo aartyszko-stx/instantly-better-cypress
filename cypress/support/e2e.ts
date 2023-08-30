@@ -2,9 +2,8 @@ import "@cypress/fiddle";
 import "cypress-mochawesome-reporter/register";
 import "./selectors";
 import "cypress-map";
-import chaiIsSorted from "chai-sorted";
-
 import "./commands";
+import chaiIsSorted from "chai-sorted";
 
 chai.use(chaiIsSorted);
 chai.use((_chai) => {
