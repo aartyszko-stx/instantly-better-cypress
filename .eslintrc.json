@@ -16,7 +16,14 @@
   "plugins": ["@typescript-eslint"],
   "rules": {
     "arrow-parens": "off",
-    "@typescript-eslint/quotes": ["error", "double"],
+    "@typescript-eslint/quotes": [
+      "error",
+      "double",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ],
     "import/no-extraneous-dependencies": "off",
     "import/no-unresolved": "off",
     "no-var": "error",
