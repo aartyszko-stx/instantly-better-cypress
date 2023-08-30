@@ -1,5 +1,5 @@
-import { User } from "../fixtures/generateUser";
-import { BasePage } from "./BasePage";
+import { User } from "utils/generateUser";
+import { BasePage } from "pages/BasePage";
 
 export class SignUpPage extends BasePage {
   fillNewUserSignUpForm(user: User) {

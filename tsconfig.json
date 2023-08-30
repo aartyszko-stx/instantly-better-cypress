@@ -7,7 +7,17 @@
     "lib": ["es5", "dom"],
     "types": ["cypress", "node"],
     "module": "es2015",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "utils/*": ["cypress/utils/*"],
+      "pages/*": ["cypress/pages/*"],
+      "support/*": ["cypress/support/*"]
+    }
   },
-  "include": ["**/*.ts", "cypress/reports/html/assets/app.js"]
+  "include": [
+    "**/*.ts",
+    "cypress/reports/html/assets/app.js",
+    "utils/generateUser.ts"
+  ]
 }

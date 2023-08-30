@@ -1,5 +1,5 @@
-import { generateUser } from "../../fixtures/generateUser";
-import { SignUpPage } from "../../pages/SignUpPage";
+import { generateUser } from "utils/generateUser";
+import { SignUpPage } from "pages/SignUpPage";
 
 describe("user registration with randomized test data using faker.js", () => {
   const SignUp = new SignUpPage();
