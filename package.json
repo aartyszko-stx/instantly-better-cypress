@@ -14,9 +14,10 @@
   "license": "ISC",
   "devDependencies": {
     "@faker-js/faker": "^8.0.2",
+    "@testing-library/cypress": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@typescript-eslint/parser": "^6.4.0",
-    "cypress": "^12.17.4",
+    "cypress": "^13.0.0",
     "cypress-mochawesome-reporter": "^3.5.1",
     "eslint": "^8.46.0",
     "eslint-config-prettier": "^9.0.0",
