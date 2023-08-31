@@ -1,7 +1,9 @@
 import "@cypress/fiddle";
-import "cypress-mochawesome-reporter/register";
 import "cypress-map";
 import "support/selectors";
+import "cypress-mochawesome-reporter/register";
+import "@testing-library/cypress/add-commands";
+
 import "support/commands";
 import chaiIsSorted from "chai-sorted";
 import registerCypressGrep from "@cypress/grep";

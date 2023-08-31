@@ -9,6 +9,8 @@ export default defineConfig({
     configFile: "reporter-config.json",
   },
   e2e: {
+    viewportHeight: 1080,
+    viewportWidth: 1920,
     specPattern: "cypress/e2e/**/*.ts",
     baseUrl: "https://www.google.com",
     setupNodeEvents(on, config) {
