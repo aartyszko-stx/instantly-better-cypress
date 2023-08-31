@@ -11,7 +11,7 @@
   "memberExpression": {
     "linePerExpression": true
   },
-  "printWidth": 140,
+  "printWidth": 120,
   "overrides": [
     {
       "files": "*.ts",

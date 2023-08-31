@@ -5,7 +5,7 @@
     "strict": true,
     "skipLibCheck": true,
     "lib": ["es5", "dom"],
-    "types": ["cypress", "node"],
+    "types": ["cypress", "node", "@cypress/grep"],
     "module": "es2015",
     "moduleResolution": "node",
     "baseUrl": "./",

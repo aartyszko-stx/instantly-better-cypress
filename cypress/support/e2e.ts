@@ -4,6 +4,9 @@ import "cypress-map";
 import "support/selectors";
 import "support/commands";
 import chaiIsSorted from "chai-sorted";
+import registerCypressGrep from "@cypress/grep";
+
+registerCypressGrep();
 
 chai.use(chaiIsSorted);
 chai.use((_chai) => {
