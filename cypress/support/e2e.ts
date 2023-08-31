@@ -6,6 +6,9 @@ import "@testing-library/cypress/add-commands";
 
 import "support/commands";
 import chaiIsSorted from "chai-sorted";
+import registerCypressGrep from "@cypress/grep";
+
+registerCypressGrep();
 
 chai.use(chaiIsSorted);
 chai.use((_chai) => {

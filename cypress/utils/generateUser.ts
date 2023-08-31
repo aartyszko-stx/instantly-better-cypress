@@ -1,29 +1,7 @@
 import { faker } from "@faker-js/faker";
+import { User } from "cypress/interfaces/user";
 
-export interface User {
-  firstName: string;
-  lastName: string;
-  title: string;
-  email: string;
-  password: string;
-  dateOfBirth: {
-    day: string;
-    month: string;
-    year: string;
-  };
-  isNewsletterSubscribed: boolean;
-  isSpecialOffersSubscribed: boolean;
-  company: string;
-  address: string;
-  address2: string;
-  country: string;
-  state: string;
-  city: string;
-  zipCode: string;
-  mobileNumber: string;
-}
-
-export const generateUser = () => {
+export const generateUser = (): User => {
   const firstName = faker.person.firstName();
   const lastName = faker.person.lastName();
   const title = faker.helpers.arrayElement(["Mr.", "Mrs."]);

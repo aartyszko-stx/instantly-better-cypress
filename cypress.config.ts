@@ -14,6 +14,7 @@ export default defineConfig({
     specPattern: "cypress/e2e/**/*.ts",
     baseUrl: "https://www.google.com",
     setupNodeEvents(on, config) {
+      require("@cypress/grep/src/plugin")(config);
       require("cypress-mochawesome-reporter/plugin")(on, config);
     },
   },
