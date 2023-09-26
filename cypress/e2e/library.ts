@@ -5,7 +5,7 @@ describe("using selectors and testing library approach", () => {
   });
 
   it("should find blog link on stx page using testing library and selector", () => {
-    // cy.findByRole("menuitem", { name: /blog/i });
+    cy.findByRole("menuitem", { name: /blog/i });
     // cy.get().click();
   });
 });
