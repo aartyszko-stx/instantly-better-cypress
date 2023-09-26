@@ -8,7 +8,7 @@ describe("user registration with randomized test data using faker.js", () => {
     cy.visit("https://www.automationexercise.com/login");
   });
 
-  it("successfull registration using data generated data by faker.js", () => {
+  it("successful registration using data generated data by faker.js", () => {
     // ARRANGE
     const userData = generateUser();
 
