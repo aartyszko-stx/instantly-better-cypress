@@ -20,6 +20,6 @@ describe("user registration with randomized test data using faker.js", () => {
     SignUp.clickButton("Create Account");
 
     // ASSERT
-    // SignUp.assertText("Account Created!");
+    SignUp.assertText("Account Created!");
   });
 });
