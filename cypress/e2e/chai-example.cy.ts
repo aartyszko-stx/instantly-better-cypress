@@ -2,7 +2,7 @@ import { testExamples } from "@cypress/fiddle";
 
 const listExample = `
   <ul>
-    <li> 1 </li>
+    <li> 11 </li>
     <li> 2 </li>
     <li> 3 </li>
     <li class="last"> 4 </li>
@@ -18,18 +18,21 @@ const tests = [
     name: "Inconvenience with should()",
     html: shouldExample,
     test: `
-    cy.get('a') // yields the element
+    cy.pause();
+    cy.get('a')
       .should('have.attr', 'href', '/users')
-      .and("have.attr", "highlighted") // yields the "highlighted" attribute
-      .and("have.text", "Users")
+      .and("have.attr", "highlighted")
+      .and("have.text", "Users");
+    cy.pause();
     `,
   },
   {
     name: "Should with callback",
     html: shouldExample,
     test: `
+  cy.pause()
   const property = "textContent";
-  cy.get('a') // yields the element
+  cy.get('a')
   .should(($hyperlink) => {
     expect($hyperlink).to.have.attr('href', '/users');
     expect($hyperlink).to.have.attr('highlighted');
@@ -41,6 +44,7 @@ const tests = [
     name: "Using chai plugins",
     html: listExample,
     test: `
+  cy.pause()
   const property = "textContent";
   cy.get('li')
     .then($listElement => {
@@ -53,11 +57,15 @@ const tests = [
     name: "Using custom chai assertion",
     html: listExample,
     test: `
+  cy.pause()
   const property = "textContent";
   cy.get('li.last')
     .should("have.textTrimmed", "4");
+  cy.pause()
+  cy.get('li.last')
+    .should("have.text", "4");
     `,
   },
 ];
 
-testExamples(tests);
+testExamples(tests); // some changes
